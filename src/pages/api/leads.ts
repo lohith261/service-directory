@@ -1,4 +1,5 @@
 import type { APIRoute } from 'astro';
+import { db } from '../../lib/firebase';
 
 export const prerender = false;
 
@@ -13,28 +14,22 @@ export const POST: APIRoute = async ({ request }) => {
       );
     }
 
-    // TODO: Save to Supabase
-    // import { supabase } from '../../lib/supabase';
-    // const { error } = await supabase!.from('leads').insert([{
-    //   business_id: data.business_id,
-    //   customer_name: data.customerName,
-    //   customer_email: data.customerEmail,
-    //   customer_phone: data.customerPhone,
-    //   service_needed: data.serviceNeeded,
-    //   zip_code: data.zipCode,
-    //   description: data.description,
-    //   status: 'new',
-    // }]);
-    // if (error) throw error;
-
-    console.log('Lead received:', {
+    const lead = {
       business_id: data.business_id,
-      name: data.customerName,
-      email: data.customerEmail,
-    });
+      customer_name: data.customerName,
+      customer_email: data.customerEmail,
+      customer_phone: data.customerPhone,
+      service_needed: data.serviceNeeded ?? '',
+      zip_code: data.zipCode ?? '',
+      description: data.description ?? '',
+      status: 'new',
+      created_at: new Date().toISOString(),
+    };
+
+    const docRef = await db.collection('leads').add(lead);
 
     return new Response(
-      JSON.stringify({ success: true, id: `lead-${Date.now()}` }),
+      JSON.stringify({ success: true, id: docRef.id }),
       { status: 201, headers: { 'Content-Type': 'application/json' } }
     );
   } catch (error) {

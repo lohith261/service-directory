@@ -7,7 +7,7 @@ export default defineConfig({
   integrations: [react()],
   vite: {
     ssr: {
-      external: ['@supabase/supabase-js'],
+      external: ['firebase-admin'],
     },
   },
 });
