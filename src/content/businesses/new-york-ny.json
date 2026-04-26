@@ -1,0 +1,50 @@
+[
+  {
+    "id": "nyc-plumber-001",
+    "name": "NYC Pipe Works",
+    "city": "New York",
+    "state": "NY",
+    "zip": "10001",
+    "phone": "(212) 555-0401",
+    "email": "info@nycpipeworks.com",
+    "website": "https://nycpipeworks.com",
+    "rating": 4.7,
+    "reviews_count": 687,
+    "trade_type": "plumber",
+    "service_radius_miles": 10,
+    "hours": "24/7 Emergency Service",
+    "verified": true
+  },
+  {
+    "id": "nyc-electrician-001",
+    "name": "Empire Electric NYC",
+    "city": "New York",
+    "state": "NY",
+    "zip": "10036",
+    "phone": "(212) 555-0402",
+    "email": "contact@empireelectricnyc.com",
+    "website": "https://empireelectricnyc.com",
+    "rating": 4.5,
+    "reviews_count": 423,
+    "trade_type": "electrician",
+    "service_radius_miles": 8,
+    "hours": "Mon-Fri 7am-7pm, Sat 8am-5pm",
+    "verified": true
+  },
+  {
+    "id": "nyc-hvac-001",
+    "name": "Metro HVAC New York",
+    "city": "New York",
+    "state": "NY",
+    "zip": "10019",
+    "phone": "(212) 555-0403",
+    "email": "service@metrohvacny.com",
+    "website": "https://metrohvacny.com",
+    "rating": 4.6,
+    "reviews_count": 289,
+    "trade_type": "hvac",
+    "service_radius_miles": 12,
+    "hours": "Mon-Sat 8am-8pm",
+    "verified": true
+  }
+]

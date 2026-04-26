@@ -1,0 +1,65 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SearchBar from '../components/SearchBar';
+
+const cities = [
+  { name: 'Austin', slug: 'austin', state: 'TX' },
+  { name: 'Los Angeles', slug: 'los-angeles', state: 'CA' },
+  { name: 'Miami', slug: 'miami', state: 'FL' },
+  { name: 'New York', slug: 'new-york', state: 'NY' },
+  { name: 'Chicago', slug: 'chicago', state: 'IL' },
+];
+---
+
+<BaseLayout title="ServiceFinder - Find Local Service Providers">
+  <div class="bg-gradient-to-br from-blue-600 to-indigo-700 text-white py-20 px-4">
+    <div class="container text-center">
+      <h1 class="text-5xl font-bold mb-4">Find Trusted Local Pros</h1>
+      <p class="text-xl text-blue-100 mb-10 max-w-2xl mx-auto">
+        Connect with verified plumbers, electricians, HVAC specialists, and more in your city.
+      </p>
+    </div>
+  </div>
+
+  <SearchBar client:load />
+
+  <div class="container py-16">
+    <h2 class="text-3xl font-bold text-gray-900 mb-3">Browse by City</h2>
+    <p class="text-gray-500 mb-8">Select a city to see verified service providers near you.</p>
+
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+      {cities.map((city) => (
+        <a
+          href={`/${city.slug}`}
+          class="group p-6 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl border border-blue-100 hover:shadow-md hover:border-blue-300 transition-all text-center"
+        >
+          <p class="font-bold text-blue-700 group-hover:text-blue-800">{city.name}</p>
+          <p class="text-sm text-gray-500 mt-1">{city.state}</p>
+        </a>
+      ))}
+    </div>
+  </div>
+
+  <div class="bg-gray-50 py-16">
+    <div class="container">
+      <h2 class="text-3xl font-bold text-gray-900 text-center mb-12">Why ServiceFinder?</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="text-center p-6">
+          <div class="text-4xl mb-4">✓</div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">Verified Providers</h3>
+          <p class="text-gray-600">Every business is manually reviewed and verified before listing.</p>
+        </div>
+        <div class="text-center p-6">
+          <div class="text-4xl mb-4">⚡</div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">Fast Estimates</h3>
+          <p class="text-gray-600">Submit a request and get a response within hours, not days.</p>
+        </div>
+        <div class="text-center p-6">
+          <div class="text-4xl mb-4">⭐</div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">Real Reviews</h3>
+          <p class="text-gray-600">Ratings and reviews from verified customers only.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

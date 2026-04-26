@@ -1,0 +1,50 @@
+[
+  {
+    "id": "la-plumber-001",
+    "name": "LA Drain Masters",
+    "city": "Los Angeles",
+    "state": "CA",
+    "zip": "90012",
+    "phone": "(310) 555-0201",
+    "email": "service@ladrainmasters.com",
+    "website": "https://ladrainmasters.com",
+    "rating": 4.9,
+    "reviews_count": 531,
+    "trade_type": "plumber",
+    "service_radius_miles": 25,
+    "hours": "24/7 Emergency Service",
+    "verified": true
+  },
+  {
+    "id": "la-electrician-001",
+    "name": "Pacific Electric LA",
+    "city": "Los Angeles",
+    "state": "CA",
+    "zip": "90028",
+    "phone": "(310) 555-0202",
+    "email": "info@pacificelectricla.com",
+    "website": "https://pacificelectricla.com",
+    "rating": 4.5,
+    "reviews_count": 274,
+    "trade_type": "electrician",
+    "service_radius_miles": 20,
+    "hours": "Mon-Sat 7am-7pm",
+    "verified": true
+  },
+  {
+    "id": "la-hvac-001",
+    "name": "SoCal HVAC Pros",
+    "city": "Los Angeles",
+    "state": "CA",
+    "zip": "90015",
+    "phone": "(310) 555-0203",
+    "email": "contact@socalhvacpros.com",
+    "website": "https://socalhvacpros.com",
+    "rating": 4.7,
+    "reviews_count": 408,
+    "trade_type": "hvac",
+    "service_radius_miles": 30,
+    "hours": "Mon-Fri 7am-8pm, Sat-Sun 8am-5pm",
+    "verified": true
+  }
+]

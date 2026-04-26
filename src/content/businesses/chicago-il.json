@@ -1,0 +1,50 @@
+[
+  {
+    "id": "chicago-plumber-001",
+    "name": "Windy City Plumbing",
+    "city": "Chicago",
+    "state": "IL",
+    "zip": "60601",
+    "phone": "(312) 555-0501",
+    "email": "info@windycityplumbing.com",
+    "website": "https://windycityplumbing.com",
+    "rating": 4.8,
+    "reviews_count": 455,
+    "trade_type": "plumber",
+    "service_radius_miles": 20,
+    "hours": "24/7 Emergency Service",
+    "verified": true
+  },
+  {
+    "id": "chicago-electrician-001",
+    "name": "Chicago Electric Co",
+    "city": "Chicago",
+    "state": "IL",
+    "zip": "60614",
+    "phone": "(312) 555-0502",
+    "email": "contact@chicagoelectricco.com",
+    "website": "https://chicagoelectricco.com",
+    "rating": 4.6,
+    "reviews_count": 318,
+    "trade_type": "electrician",
+    "service_radius_miles": 15,
+    "hours": "Mon-Fri 7am-6pm, Sat 8am-4pm",
+    "verified": true
+  },
+  {
+    "id": "chicago-hvac-001",
+    "name": "Lake Shore HVAC",
+    "city": "Chicago",
+    "state": "IL",
+    "zip": "60657",
+    "phone": "(312) 555-0503",
+    "email": "service@lakeshorehvac.com",
+    "website": "https://lakeshorehvac.com",
+    "rating": 4.9,
+    "reviews_count": 521,
+    "trade_type": "hvac",
+    "service_radius_miles": 25,
+    "hours": "Mon-Sat 7am-8pm",
+    "verified": true
+  }
+]

@@ -1,0 +1,56 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = 'Find verified service providers in your city' } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body style="font-family: 'Inter', sans-serif;">
+  <nav class="bg-white shadow-sm border-b border-gray-100">
+    <div class="container py-4 flex items-center justify-between">
+      <a href="/" class="text-2xl font-bold text-blue-600">ServiceFinder</a>
+      <div class="flex gap-6">
+        <a href="/about" class="text-gray-600 hover:text-gray-900 font-medium transition-colors">About</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <slot />
+  </main>
+
+  <footer class="bg-gray-900 text-white py-10 mt-16">
+    <div class="container">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+        <div>
+          <p class="text-xl font-bold text-white">ServiceFinder</p>
+          <p class="text-gray-400 text-sm mt-1">Connecting you with verified local pros.</p>
+        </div>
+        <div class="flex gap-6 text-sm text-gray-400">
+          <a href="/austin" class="hover:text-white transition-colors">Austin</a>
+          <a href="/los-angeles" class="hover:text-white transition-colors">Los Angeles</a>
+          <a href="/miami" class="hover:text-white transition-colors">Miami</a>
+          <a href="/new-york" class="hover:text-white transition-colors">New York</a>
+          <a href="/chicago" class="hover:text-white transition-colors">Chicago</a>
+        </div>
+      </div>
+      <p class="text-center text-gray-500 text-sm mt-8">&copy; 2025 ServiceFinder. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

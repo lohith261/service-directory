@@ -1,0 +1,50 @@
+[
+  {
+    "id": "austin-plumber-001",
+    "name": "Austin Quick Plumbing",
+    "city": "Austin",
+    "state": "TX",
+    "zip": "78701",
+    "phone": "(512) 555-0101",
+    "email": "contact@austinquick.com",
+    "website": "https://austinquick.com",
+    "rating": 4.8,
+    "reviews_count": 247,
+    "trade_type": "plumber",
+    "service_radius_miles": 15,
+    "hours": "24/7 Emergency Service",
+    "verified": true
+  },
+  {
+    "id": "austin-electrician-001",
+    "name": "Spark Electric Austin",
+    "city": "Austin",
+    "state": "TX",
+    "zip": "78704",
+    "phone": "(512) 555-0102",
+    "email": "info@sparkelectric.com",
+    "website": "https://sparkelectric.com",
+    "rating": 4.6,
+    "reviews_count": 189,
+    "trade_type": "electrician",
+    "service_radius_miles": 12,
+    "hours": "Mon-Sat 7am-6pm",
+    "verified": true
+  },
+  {
+    "id": "austin-hvac-001",
+    "name": "Cool Air HVAC Austin",
+    "city": "Austin",
+    "state": "TX",
+    "zip": "78745",
+    "phone": "(512) 555-0103",
+    "email": "hello@coolair.com",
+    "website": "https://coolairaustintx.com",
+    "rating": 4.7,
+    "reviews_count": 312,
+    "trade_type": "hvac",
+    "service_radius_miles": 20,
+    "hours": "Mon-Fri 8am-7pm, Sat 9am-4pm",
+    "verified": true
+  }
+]

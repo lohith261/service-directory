@@ -1,0 +1,54 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CityNav from '../components/CityNav';
+import SearchBar from '../components/SearchBar';
+import BusinessGrid from '../components/BusinessGrid';
+import type { Business } from '../lib/types';
+
+import austinData from '../content/businesses/austin-tx.json';
+import laData from '../content/businesses/los-angeles-ca.json';
+import miamiData from '../content/businesses/miami-fl.json';
+import nycData from '../content/businesses/new-york-ny.json';
+import chicagoData from '../content/businesses/chicago-il.json';
+
+const cityMap: Record<string, { name: string; businesses: Business[] }> = {
+  'austin': { name: 'Austin', businesses: austinData as Business[] },
+  'los-angeles': { name: 'Los Angeles', businesses: laData as Business[] },
+  'miami': { name: 'Miami', businesses: miamiData as Business[] },
+  'new-york': { name: 'New York', businesses: nycData as Business[] },
+  'chicago': { name: 'Chicago', businesses: chicagoData as Business[] },
+};
+
+export function getStaticPaths() {
+  return Object.keys({
+    austin: true,
+    'los-angeles': true,
+    miami: true,
+    'new-york': true,
+    chicago: true,
+  }).map((slug) => ({ params: { city: slug } }));
+}
+
+const { city } = Astro.params;
+const cityInfo = cityMap[city!] ?? { name: city!, businesses: [] };
+const { name: cityName, businesses } = cityInfo;
+---
+
+<BaseLayout
+  title={`${cityName} Service Providers - ServiceFinder`}
+  description={`Find verified plumbers, electricians, HVAC and more in ${cityName}.`}
+>
+  <CityNav activeCity={city} client:load />
+  <SearchBar client:load initialCity={cityName} />
+
+  <div class="container py-12">
+    <h1 class="text-4xl font-bold text-gray-900 mb-2">
+      Service Providers in {cityName}
+    </h1>
+    <p class="text-lg text-gray-500 mb-8">
+      {businesses.length} verified provider{businesses.length !== 1 ? 's' : ''} available
+    </p>
+
+    <BusinessGrid businesses={businesses} cityName={cityName} client:load />
+  </div>
+</BaseLayout>

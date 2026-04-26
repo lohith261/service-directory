@@ -1,0 +1,51 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="About - ServiceFinder" description="Learn about ServiceFinder and our mission to connect you with trusted local service providers.">
+  <div class="container py-16">
+    <div class="max-w-3xl mx-auto">
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">About ServiceFinder</h1>
+      <p class="text-lg text-gray-600 mb-10">
+        ServiceFinder connects homeowners and businesses with verified, highly-rated local service providers across the United States.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-3">Our Mission</h2>
+      <p class="text-gray-700 leading-relaxed">
+        To make finding reliable service professionals fast, easy, and transparent — so you spend less time searching and more time getting things done.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-3">How We Verify Providers</h2>
+      <ul class="space-y-2 text-gray-700">
+        <li class="flex items-start gap-2">
+          <span class="text-green-500 font-bold mt-0.5">✓</span>
+          License and insurance verification
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-green-500 font-bold mt-0.5">✓</span>
+          Background checks on all listed businesses
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-green-500 font-bold mt-0.5">✓</span>
+          Review authenticity checks — only real customer reviews
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-green-500 font-bold mt-0.5">✓</span>
+          Ongoing performance monitoring
+        </li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-3">Cities We Serve</h2>
+      <div class="grid grid-cols-2 md:grid-cols-5 gap-3">
+        {['Austin', 'Los Angeles', 'Miami', 'New York', 'Chicago'].map((city) => (
+          <a
+            href={`/${city.toLowerCase().replace(' ', '-')}`}
+            class="px-4 py-2 bg-blue-50 text-blue-700 rounded-lg text-center font-medium hover:bg-blue-100 transition-colors"
+          >
+            {city}
+          </a>
+        ))}
+      </div>
+    </div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,50 @@
+[
+  {
+    "id": "miami-plumber-001",
+    "name": "Miami Plumbing Solutions",
+    "city": "Miami",
+    "state": "FL",
+    "zip": "33101",
+    "phone": "(305) 555-0301",
+    "email": "info@miamiplumbing.com",
+    "website": "https://miamiplumbingsolutions.com",
+    "rating": 4.6,
+    "reviews_count": 198,
+    "trade_type": "plumber",
+    "service_radius_miles": 18,
+    "hours": "24/7 Emergency Service",
+    "verified": true
+  },
+  {
+    "id": "miami-electrician-001",
+    "name": "Sunshine Electric Miami",
+    "city": "Miami",
+    "state": "FL",
+    "zip": "33130",
+    "phone": "(305) 555-0302",
+    "email": "service@sunshineelectricmiami.com",
+    "website": "https://sunshineelectricmiami.com",
+    "rating": 4.4,
+    "reviews_count": 143,
+    "trade_type": "electrician",
+    "service_radius_miles": 15,
+    "hours": "Mon-Sat 8am-6pm",
+    "verified": false
+  },
+  {
+    "id": "miami-hvac-001",
+    "name": "Tropic Air Systems",
+    "city": "Miami",
+    "state": "FL",
+    "zip": "33125",
+    "phone": "(305) 555-0303",
+    "email": "hello@tropicairsystems.com",
+    "website": "https://tropicairsystems.com",
+    "rating": 4.8,
+    "reviews_count": 362,
+    "trade_type": "hvac",
+    "service_radius_miles": 22,
+    "hours": "Mon-Fri 7am-7pm, Sat 8am-4pm",
+    "verified": true
+  }
+]
